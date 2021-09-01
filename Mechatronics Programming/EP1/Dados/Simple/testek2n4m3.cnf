@@ -1,0 +1,9 @@
+c
+c 2-SAT com 4 variaveis e 3 clausulas
+c
+p cnf 4 3
+1 3 0
+-2 4 0
+1 2 0
+
+-

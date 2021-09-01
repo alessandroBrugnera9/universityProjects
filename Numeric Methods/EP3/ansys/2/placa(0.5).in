@@ -1,0 +1,115 @@
+/CLEAR
+
+espessura=5
+elasticidade=90e9
+poisson=0.31
+tamanhoElemento=0.5
+
+/PREP7
+
+MPTEMP,1,0  
+MPDATA,EX,1,,elasticidade 
+MPDATA,PRXY,1,,poisson
+
+ET,1,PLANE182
+
+!KEYPOINTS
+!QUADRADO CENTRAL
+K,1,0,10,0
+K,2,25,10,0
+K,3,25,0,0
+
+!ENTRONO EMCIMA A DIREITA
+K,4,0,35,0
+K,5,20,35,0
+K,6,20,50,0
+K,7,50,50,0
+K,8,50,40,0
+K,9,75,40,0
+K,10,85,30,0
+K,11,100,30,0
+K,12,100,15,0
+K,13,66,15,0
+K,14,66,0,0
+
+!linhas
+L,1,2
+L,2,3
+L,4,5
+L,5,6
+L,6,7
+L,7,8
+L,8,9
+L,9,10
+L,10,11
+L,11,12
+L,12,13
+L,13,14
+
+
+!linhas para fechar simetria
+L,1,4
+L,3,14
+
+
+!Area
+FLST,2,14,4 
+FITEM,2,13  
+FITEM,2,3   
+FITEM,2,4   
+FITEM,2,5   
+FITEM,2,6   
+FITEM,2,7   
+FITEM,2,8   
+FITEM,2,9   
+FITEM,2,10  
+FITEM,2,11  
+FITEM,2,12  
+FITEM,2,14  
+FITEM,2,2   
+FITEM,2,1   
+AL,P51X
+
+
+!malhagem
+
+TYPE,1
+MAT,1
+
+ESIZE,tamanhoElemento,0
+
+AMESH,1
+
+FINISH
+
+
+
+!ANALISE ESTATICA
+/SOL
+
+!condicoes de contorno
+    !simetria
+DL,13, ,SYMM  !em Y
+DL,14, ,SYMM  !em X
+
+
+!pressoes definidas por mm^2
+P1=-20e6
+P2=-38e6
+
+
+SFL,10,PRES,P1, 
+SFL,5,PRES,P2, 
+
+SOLVE
+
+
+
+FINISH  
+!POS-PROCESSAMENTO
+
+/POST1  
+SET,LIST,999
+SET,,, ,,, ,1  
+/EFACET,1   
+PLNSOL, S,EQV, 0,1.0

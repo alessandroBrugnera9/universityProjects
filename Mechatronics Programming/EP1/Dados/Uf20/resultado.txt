@@ -1,0 +1,62 @@
+Arquivo: uf20-01.cnf
+BruteForce:
+Interações: 441111
+Combinação de variavéis:
+x₁=1 x₂=0 x₃=0 x₄=1 x₅=0 x₆=1 x₇=0 x₈=0 x₉=0 x₁₀=1 x₁₁=0 x₁₂=0 x₁₃=1 x₁₄=1 x₁₅=1 x₁₆=0 x₁₇=1 x₁₈=0 x₁₉=0 x₂₀=1 
+Tempo(BruteForce):21.640942044014682
+RandomSearch:
+Interações: 121742
+Combinação de variavéis:
+x₁=1 x₂=0 x₃=0 x₄=0 x₅=0 x₆=1 x₇=0 x₈=0 x₉=0 x₁₀=0 x₁₁=0 x₁₂=0 x₁₃=1 x₁₄=1 x₁₅=1 x₁₆=0 x₁₇=1 x₁₈=0 x₁₉=0 x₂₀=1 
+Tempo(RandomSearch):26.790076490936084
+
+Arquivo: uf20-02.cnf
+BruteForce:
+Interações: 460430
+Combinação de variavéis:
+x₁=1 x₂=0 x₃=0 x₄=0 x₅=1 x₆=1 x₇=1 x₈=1 x₉=1 x₁₀=0 x₁₁=0 x₁₂=1 x₁₃=0 x₁₄=1 x₁₅=1 x₁₆=1 x₁₇=0 x₁₈=0 x₁₉=1 x₂₀=0 
+Tempo(BruteForce):22.906260864582357
+RandomSearch:
+Interações: 103097
+Combinação de variavéis:
+x₁=0 x₂=0 x₃=0 x₄=0 x₅=1 x₆=1 x₇=1 x₈=1 x₉=1 x₁₀=0 x₁₁=0 x₁₂=1 x₁₃=0 x₁₄=1 x₁₅=1 x₁₆=1 x₁₇=0 x₁₈=0 x₁₉=1 x₂₀=0 
+Tempo(RandomSearch):17.17180633129594
+
+Arquivo: uf20-03.cnf
+BruteForce:
+Interações: 33123
+Combinação de variavéis:
+x₁=1 x₂=1 x₃=1 x₄=1 x₅=0 x₆=1 x₇=1 x₈=1 x₉=1 x₁₀=1 x₁₁=1 x₁₂=0 x₁₃=1 x₁₄=0 x₁₅=0 x₁₆=1 x₁₇=1 x₁₈=1 x₁₉=0 x₂₀=1 
+Tempo(BruteForce):1.5292948696292967
+RandomSearch:
+Interações: 855260
+Combinação de variavéis:
+x₁=1 x₂=1 x₃=1 x₄=1 x₅=0 x₆=1 x₇=1 x₈=1 x₉=1 x₁₀=1 x₁₁=1 x₁₂=0 x₁₃=1 x₁₄=0 x₁₅=0 x₁₆=1 x₁₇=1 x₁₈=1 x₁₉=0 x₂₀=1 
+Tempo(RandomSearch):150.63507233646945
+
+Arquivo: uf20-04.cnf
+BruteForce:
+Interações: 317800
+Combinação de variavéis:
+x₁=1 x₂=0 x₃=1 x₄=1 x₅=0 x₆=0 x₇=1 x₈=0 x₉=0 x₁₀=1 x₁₁=1 x₁₂=0 x₁₃=1 x₁₄=0 x₁₅=0 x₁₆=1 x₁₇=1 x₁₈=0 x₁₉=0 x₂₀=0 
+Tempo(BruteForce):17.429926784742207
+RandomSearch:
+Interações: 252371
+Combinação de variavéis:
+x₁=1 x₂=0 x₃=1 x₄=1 x₅=0 x₆=0 x₇=1 x₈=0 x₉=0 x₁₀=1 x₁₁=0 x₁₂=0 x₁₃=1 x₁₄=0 x₁₅=0 x₁₆=1 x₁₇=1 x₁₈=0 x₁₉=0 x₂₀=0 
+Tempo(RandomSearch):43.33334473691298
+
+Arquivo: uf20-05.cnf
+BruteForce:
+Interações: 1006155
+Combinação de variavéis:
+x₁=0 x₂=0 x₃=0 x₄=0 x₅=1 x₆=0 x₇=1 x₈=0 x₉=0 x₁₀=1 x₁₁=0 x₁₂=1 x₁₃=1 x₁₄=0 x₁₅=1 x₁₆=1 x₁₇=0 x₁₈=1 x₁₉=0 x₂₀=1 
+Tempo(BruteForce):43.46420466232507
+RandomSearch:
+Interações: 957144
+Combinação de variavéis:
+x₁=0 x₂=0 x₃=0 x₄=0 x₅=1 x₆=0 x₇=1 x₈=0 x₉=0 x₁₀=1 x₁₁=0 x₁₂=1 x₁₃=1 x₁₄=0 x₁₅=1 x₁₆=1 x₁₇=0 x₁₈=1 x₁₉=0 x₂₀=1 
+Tempo(RandomSearch):197.53053116021016
+
+
+Total=542.4317309735907

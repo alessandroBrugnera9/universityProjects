@@ -1,0 +1,521 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt_BR">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>src package &#8212; documentação MAC2166 Exercício-Programa 3 </title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Buscar" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="src-package">
+<h1>src package<a class="headerlink" href="#src-package" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link permanente para este título">¶</a></h2>
+</div>
+<div class="section" id="module-src.ep3">
+<span id="src-ep3-module"></span><h2>src.ep3 module<a class="headerlink" href="#module-src.ep3" title="Link permanente para este título">¶</a></h2>
+<dl class="function">
+<dt id="src.ep3.busca">
+<code class="descclassname">src.ep3.</code><code class="descname">busca</code><span class="sig-paren">(</span><em>matriz</em>, <em>transformações</em>, <em>identificação</em>, <em>max_transfs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/src/ep3.html#busca"><span class="viewcode-link">[código fonte]</span></a><a class="headerlink" href="#src.ep3.busca" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Busca imagem com identificação dada usando no máximo um conjunto de
+max_transfs transformações.</p>
+<p>A função :func:’busca’ recebe uma matriz representando uma imagem
+monocromática, uma lista de transformações possíveis, um identificador
+correspondente à dispersão criptográfica da imagem original e o valor do
+número máximo de transformações em sequencia à serem realizadas sobre à
+matriz nessa busca e devolve:</p>
+<blockquote>
+<div><ul class="simple">
+<li>A matriz da imagem original (caso encontrada) OU</li>
+<li>None (caso contrário)</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>matriz</strong> (<em>&lt;class 'list'&gt;</em>) – Uma matriz de inteiros representando uma imagem</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Transformações:</th><td class="field-body">Uma lista de matrizes de transformação</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Identificação:</th><td class="field-body">Uma string com o identificador da imagem original</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Max_transfs:</th><td class="field-body">Número máximo de sequencias de transformações à testar</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return resultado:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Matriz com imagem restaurada ou None se ela não for
+encontrada.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">&lt;class ‘list’&gt; OU &lt;class ‘NoneType’&gt;</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">original</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">identificador</span> <span class="o">=</span> <span class="n">calcula_id</span><span class="p">(</span><span class="n">imagem</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">identificador</span><span class="p">)</span>
+<span class="go">11403310</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nova</span> <span class="o">=</span> <span class="n">transforma</span><span class="p">(</span><span class="n">imagem</span><span class="p">,</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span> <span class="c1"># Aplica desloc em eixo x</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">nova</span><span class="p">)</span>
+<span class="go">[[3, 1, 2], [6, 4, 5], [9, 7, 8]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nova2</span> <span class="o">=</span> <span class="n">transforma</span><span class="p">(</span><span class="n">nova</span><span class="p">,</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span> <span class="c1"># Aplica Desloc x+1 e y+1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">nova2</span><span class="p">)</span>
+<span class="go">[[8, 9, 7], [2, 3, 1], [5, 6, 4]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">transfs</span> <span class="o">=</span> <span class="p">[[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">resultado</span> <span class="o">=</span> <span class="n">busca</span><span class="p">(</span><span class="n">nova2</span><span class="p">,</span> <span class="n">transfs</span><span class="p">,</span> <span class="n">identificador</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">resultado</span><span class="p">)</span>
+<span class="go">[[1, 2, 3], [4, 5, 6], [7, 8, 9]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">resultado2</span> <span class="o">=</span> <span class="n">busca</span><span class="p">(</span><span class="n">nova2</span><span class="p">,</span> <span class="n">transfs</span><span class="p">,</span> <span class="n">identificador</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">resultado2</span><span class="p">)</span>
+<span class="go">None</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.ep3.calcula_id">
+<code class="descclassname">src.ep3.</code><code class="descname">calcula_id</code><span class="sig-paren">(</span><em>matriz</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/src/ep3.html#calcula_id"><span class="viewcode-link">[código fonte]</span></a><a class="headerlink" href="#src.ep3.calcula_id" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Retorna o valor de identificação de uma matriz computada pelo
+algoritmo adler32</p>
+<p>A função :func:’calcula_id’ computa um identificador para uma matriz
+usando a seguinte versão adaptada do algoritmo de espalhamento Adler32:</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>A = 1 + matriz[0][0] + matriz[0][1] +…+ matriz[m-1][n-1] MOD 65521,</dt>
+<dd><p class="first last">onde m é o número de linhas e n é o número de colunas da matriz</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">B = (1 + matriz[0][0]) + (1 + matriz[0][0]+matriz[0][1]) + … +
+(1 + matriz[0][0] + matriz[0][1] + … + matriz[m-1][n-1]) MOD 65521</p>
+</li>
+<li><p class="first">retorna B * (2**16) + A</p>
+</li>
+</ul>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>matriz</strong> (<em>&lt;class 'list'&gt;</em>) – Uma matriz de inteiros</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return identificador:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">O identificador inteiro da matriz computado segundo
+a nossa versão adaptada do Adler32</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">&lt;class ‘int’&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Examples:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">matriz_A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matriz_B</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matriz_C</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matriz_D</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">calcula_id</span><span class="p">(</span><span class="n">matriz_A</span><span class="p">)</span>
+<span class="go">2686992</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">calcula_id</span><span class="p">(</span><span class="n">matriz_B</span><span class="p">)</span>
+<span class="go">4456464</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">calcula_id</span><span class="p">(</span><span class="n">matriz_C</span><span class="p">)</span>
+<span class="go">589827</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">calcula_id</span><span class="p">(</span><span class="n">matriz_D</span><span class="p">)</span>
+<span class="go">2752528</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">Ver também</p>
+<p class="last">Consulte o enunciado para um exemplo mais detalhado.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.ep3.carrega_identificador">
+<code class="descclassname">src.ep3.</code><code class="descname">carrega_identificador</code><span class="sig-paren">(</span><em>nome_arquivo</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/src/ep3.html#carrega_identificador"><span class="viewcode-link">[código fonte]</span></a><a class="headerlink" href="#src.ep3.carrega_identificador" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Carrega o identificador de uma imagem presente em um arquivo.</p>
+<p>A função :func:’carrega_identificador’ abre um arquivo de nome
+‘nome_arquivo’ presente na mesma pasta que o programa ep3.py, lê sua
+primeira linha e retorna o identificador de dispersão criptográfica (MD5)
+presente nessa linha.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>nome_arquivo</strong> (<em>&lt;class 'str'&gt;</em>) – String com o nome do arquivo com o identificador</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return identificador:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">String contendo identificador codificado em MD5</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">&lt;class ‘str’&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">identificador</span> <span class="o">=</span> <span class="n">carrega_identificador</span><span class="p">(</span><span class="s1">&#39;img00.chk&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">identificador</span><span class="p">)</span>
+<span class="go">d04fc423694a611d64a1955f04d4c42d</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">Ver também</p>
+<p class="last">Caso haja interesse, consulte à RFC1321 para maiores informações sobre
+o MD5 em <a class="reference external" href="https://www.ietf.org/rfc/rfc1321.txt">https://www.ietf.org/rfc/rfc1321.txt</a></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Embora pelas regras da disciplina você possa assumir que o arquivo
+‘nome_arquivo’ está presente na mesma pasta do programa ep3.py,
+boas práticas de programação sugerem que para escrita e leitura de
+arquivos, você sempre deve verificar à existência/permissões.
+Com relação ao identificador, você pode assumir que o arquivo contém
+um identificador válido na primeira linha.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.ep3.carrega_imagem">
+<code class="descclassname">src.ep3.</code><code class="descname">carrega_imagem</code><span class="sig-paren">(</span><em>nome_imagem</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/src/ep3.html#carrega_imagem"><span class="viewcode-link">[código fonte]</span></a><a class="headerlink" href="#src.ep3.carrega_imagem" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Carrega do arquivo ‘nome_imagem’ uma imagem em formato PGM do tipo P2 e
+retorna à imagem em formato de matriz de pixels.</p>
+<p>A função :func:’carrega_imagem’ lê uma imagem em formato PGM do tipo P2
+presente em um arquivo na mesma pasta do programa ep3.py e retorna uma
+matriz de inteiros de tamanho N-por-M, onde N é a altura da imagem, e M é
+largura da imagem, ambos medidos em pixels e obtidos através do cabeçalho
+da imagem.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>nome_imagem</strong> (<em>&lt;class 'str'&gt;</em>) – String com o nome de imagem na mesma pasta de ep3.py</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return matriz:</th><td class="field-body">Matriz de inteiros representando os pixels da imagem</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">&lt;class ‘list’&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">A</span> <span class="o">=</span> <span class="n">carrega_imagem</span><span class="p">(</span><span class="s1">&#39;imagem.pgm&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="go">[[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15]]</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">Ver também</p>
+<p class="last">Vide enunciado para uma explicação mais detalhada acerca do formato PGM</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Você pode assumir que a imagem está no formato correto e que o valor
+da intensidade de cada pixel é um inteiro entre 0 e 255 (inclusive).</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.ep3.carrega_transformações">
+<code class="descclassname">src.ep3.</code><code class="descname">carrega_transformações</code><span class="sig-paren">(</span><em>nome_arquivo</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/src/ep3.html#carrega_transformações"><span class="viewcode-link">[código fonte]</span></a><a class="headerlink" href="#src.ep3.carrega_transformações" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Carrega transformações de um arquivo de texto.</p>
+<p>A função :func:’carrega_transformações’ recebe uma string com o nome de um
+arquivo presente na mesma pasta do programa ep3.py que contém as matrizes
+de transformação.
+Neste arquivo:</p>
+<blockquote>
+<div><ul class="simple">
+<li>A primeira linha representa o número total de transformações</li>
+<li>Todas as outras linhas trazem ou transformações ou comentários</li>
+</ul>
+</div></blockquote>
+<p>Uma linha começando com # indica um comentário e deve ser ignorada.
+Todas as outras linhas representam matrizes 2-por-3 de modo que a matriz
+inteira está representada em uma única linhado arquivo e cada elemento da
+matriz é separado por um (ou mais) espaços.
+O exemplo abaixo mostra o conteúdo de um possível arquivo de transformações</p>
+<p><strong>Exemplo de arquivo de transformações</strong>:
+2
+# Meu conjunto de transformações
+# transformação identidade
+1 0 0 0 1 0
+# espelhamento
+-1 0 0 0 -1 0</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><strong>nome_arquivo</strong> (<em>&lt;class 'str'&gt;</em>) – String com nome de um arquivo texto contendo as
+transformações</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return lista:</th><td class="field-body">Uma lista de matrizes de transformação</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">&lt;class ‘list’&gt;</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">transformações</span> <span class="o">=</span> <span class="n">carrega_transformações</span><span class="p">(</span><span class="s1">&#39;duas_transformações.txt&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">transformações</span><span class="p">)</span>
+<span class="go">[[[1, 0, -20], [0, 1, -20]], [[1, 0, 0], [0, 1, 0]]]</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">Ver também</p>
+<p class="last">Veja o enunciado para maiores detalhes da estrutura desse arquivo.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Você pode considerar que o arquivo de transformações só contém os
+três tipos de linhas mencionados (número total de transformações,
+comentários e transformações), você não precisa tratar outros formatos.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.ep3.main">
+<code class="descclassname">src.ep3.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/src/ep3.html#main"><span class="viewcode-link">[código fonte]</span></a><a class="headerlink" href="#src.ep3.main" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Aqui você deve implementar à interface de comunicação com o usuário</p>
+<dl class="docutils">
+<dt>Sua interface deve (necessariamente nessa ordem):</dt>
+<dd><ol class="first last arabic simple">
+<li>Escrever uma mensagem de identificação do autor e descrição do programa.</li>
+<li>Solicitar ao usuário que digite o nome do arquivo da imagem transformada.</li>
+<li>Solicitar ao usuário que digite o nome do arquivo contendo o identificador.</li>
+<li>Solicitar ao usuário que digite o nome do o arquivo com as transformações.</li>
+<li>Solicitar ao usuário que digite o nome do arquivo no qual será salva a imagem restaurada (se encontrada).</li>
+<li>Informar se a busca foi exitosa ou não.</li>
+</ol>
+</dd>
+</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre>&gt;&gt;&gt; $ python3 ep3.py
+*****************************
+*** Programa desfaz vírus ***
+*****************************
+<p></p>
+<p>Autor: Denis Mauá
+NUSP: 3730790</p>
+<p>Entre com o nome do arquivo contendo imagem transformada: img00.pgm
+Entre com o nome do arquivo contendo o identificador da imagem original: img00.adler
+Entre com o nome do arquivo contendo as transformações disponíveis: transformações00.txt
+Entre com o nome do arquivo onde a imagem original deve ser salva: resultado00.pgm
+Entre com o número máximo de transformações: 2</p>
+<p>Tentando restaurar imagem ‘img00.pgm’… Falhou!</p>
+<p>Não foi possível encontrar uma imagem com o identificador 870647247 utilizando uma sequência de no máximo 2 transformações em ‘transformações00.txt’!</p>
+<p>Você pode tentar aumentar o número máximo de transformações ou mudar o arquivo de transformações.</p>
+</pre></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre>&gt;&gt;&gt; $ python3 ep3.py
+*****************************
+*** Programa desfaz vírus ***
+*****************************
+<p></p>
+<p>Autor: Denis Mauá
+NUSP: 3730790</p>
+<p>Entre com o nome do arquivo contendo imagem transformada: img01.pgm
+Entre com o nome do arquivo contendo o identificador da imagem original: img01.adler
+Entre com o nome do arquivo contendo as transformações disponíveis: transformações.txt
+Entre com o nome do arquivo onde a imagem original deve ser salva: resultado01.pgm
+Entre com o número máximo de transformações: 6</p>
+<p>Tentando restaurar imagem ‘img01.pgm’… Pronto!</p>
+<p>Imagem com o identificador 870647247 salva em ‘resultado01.pgm’!</p>
+</pre></div>
+<div class="admonition seealso">
+<p class="first admonition-title">Ver também</p>
+<p class="last">Consulte o enunciado para mais exemplos.</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.ep3.salva_imagem">
+<code class="descclassname">src.ep3.</code><code class="descname">salva_imagem</code><span class="sig-paren">(</span><em>nome_arquivo</em>, <em>matriz</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/src/ep3.html#salva_imagem"><span class="viewcode-link">[código fonte]</span></a><a class="headerlink" href="#src.ep3.salva_imagem" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Cria (se não existir) e escreve a imagem representada pela matriz no
+arquivo de nome nome_arquivo no formato PGM (tipo 2).</p>
+<p>A função :func:’salva_imagem’ recebe uma matriz de inteiros (0-255)
+representando uma imagem em tons de cinza e salva essa imagem no arquivo
+‘nome_arquivo’ no formato Portable GrayMap (PGM) do tipo P2 na mesma pasta.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>nome_arquivo</strong> (<em>&lt;class 'str'&gt;</em>) – String contendo o nome de um arquivo (ex.’imagem.ppm’)</li>
+<li><strong>matriz</strong> (<em>&lt;class 'list'&gt;</em>) – Matriz de inteiros representando uma imagem em tons de cinza</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">M</span> <span class="o">=</span> <span class="n">carrega_imagem</span><span class="p">(</span><span class="s1">&#39;imagem.pgm&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+<span class="go">[[0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">M</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">255</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+<span class="go">[[255, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">salva_imagem</span><span class="p">(</span><span class="s1">&#39;nova_imagem.pgm&#39;</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">Ver também</p>
+<p class="last">Consulte o enunciado para informações específicas do formato PGM tipo 2</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="src.ep3.transforma">
+<code class="descclassname">src.ep3.</code><code class="descname">transforma</code><span class="sig-paren">(</span><em>matriz</em>, <em>transformação</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/src/ep3.html#transforma"><span class="viewcode-link">[código fonte]</span></a><a class="headerlink" href="#src.ep3.transforma" title="Link permanente para esta definição">¶</a></dt>
+<dd><p>Devolve uma transformação geométrica linear da matriz.</p>
+<p>A função :func:’transforma’ recebe uma matriz de pixels e uma transformação
+afim representada matricialmente e retorna a matriz transformada, <strong>sem</strong>
+modificar a matriz original.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parâmetros:</th><td class="field-body"><ul class="first simple">
+<li><strong>matriz</strong> (<em>&lt;class 'list'&gt;</em>) – Matriz representando imagem em tons de cinza (0-255)</li>
+<li><strong>transformação</strong> (<em>&lt;class 'list'&gt;</em>) – Matriz 3-por-3 representando transformação linear</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return matriz_transformada:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body"><p class="first">Matriz resultado da transformação aplicada
+sobre todos os pontos</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Tipo de retorno:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body"><p class="first">&lt;class ‘list’&gt;</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Example:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">matriz1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matriz1</span><span class="p">)</span>
+<span class="go">[[1, 2, 3], [4, 5, 6]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">translação_diagonal_por_1_pixel</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matriz2</span> <span class="o">=</span> <span class="n">transforma</span><span class="p">(</span><span class="n">matriz1</span><span class="p">,</span> <span class="n">translação_diagonal_por_1_pixel</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matriz1</span><span class="p">)</span>
+<span class="go">[[1, 2, 3], [4, 5, 6]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">matriz2</span><span class="p">)</span>
+<span class="go">[[6, 4, 5], [3, 1, 2]]</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="first admonition-title">Ver também</p>
+<p class="last">Vide enunciado para maiores exemplos da aplicação dessa transformação</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">Você pode assumir que só serão utilizadas transformações inversíveis
+cujos coeficientes são inteiros.</p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src" title="Link permanente para este título">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Tabela de Conteúdo</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">src package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-src.ep3">src.ep3 module</a></li>
+<li><a class="reference internal" href="#module-src">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Essa Página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/source/src.rst.txt"
+            rel="nofollow">Exibir Fonte</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Busca rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Ir" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, MAC2166.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="../_sources/source/src.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

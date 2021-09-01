@@ -1,0 +1,24 @@
+Distancia entre A e Y = 4450
+Caminho percorrido: A->B->C->F->I->Z->Y
+
+Distancia entre G e Y = 4450
+Caminho percorrido: G->J->F->I->Z->Y
+
+Distancia entre D e U = 2760
+Caminho percorrido: D->J->N->V->U
+
+Distancia entre Q e J = 1850
+Caminho percorrido: Q->P->J
+
+Distancia entre V e K = 1820
+Caminho percorrido: V->U->Q->P->O->K
+
+Distancia entre L e H = 3630
+Caminho percorrido: L->M->N->G->H
+
+Distancia entre T e W = 3180
+Caminho percorrido: T->U->V->X->Z->W
+
+Distancia entre X e K = 2300
+Caminho percorrido: X->V->U->Q->P->O->K
+

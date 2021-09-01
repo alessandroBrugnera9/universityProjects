@@ -1,0 +1,16 @@
+Descrição dos arquivos:
+
+inicializa.py             - Primeiro arquivo que deve ser executado assim que você descompactar o EP.
+data.p                    - Arquivo binário auxiliar contendo dados do EP (NÃO DEVE SER APAGADO)
+enunciado_ep3_mac2166.pdf - Arquivo .pdf com as instruções desse EP
+LEIAME.txt                - Arquivo .txt com o resumo das atividades
+ARQUIVO.txt               - Arquivo com a descrição de todos os arquivos da pasta
+ep3.py                    - Arquivo que deve conter sua implementação
+transformações.txt        - Arquivo com o primeiro conjunto de transformações
+duas_transformações.txt   - Arquivo com o segundo conjunto de transformações
+imgXY.pgm                 - Arquivo com uma imagem transformada
+imgXY.adler32             - Identificador adler32 da matriz original que gerou imgXY.pgm
+testa_parte_01.py         - Arquivo de teste da parte01 (identificação)
+testa_parte_02.py         - Arquivo de teste da parte02 (escrita e leitura)
+testa_parte_03.py         - Arquivo de teste da parte03 (transformações)
+testa_parte_04.py         - Arquivo de teste da parte04 (busca)

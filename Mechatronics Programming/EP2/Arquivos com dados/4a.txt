@@ -1,0 +1,8 @@
+A - Y
+G - Y
+D - U
+Q - J
+V - K
+L - H
+T - W
+X - K
