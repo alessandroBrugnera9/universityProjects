@@ -15,3 +15,5 @@ Programming projects done in mechatronics engineering of Poli-USP in different c
 		- System Information (Python and Django)
 
 Numeric Calculus, Numeric Methods, Programming Introduction and General Mechanics II projects are bigger and requires stricts functions to program simple and complex mathematical and algebraic problems.
+
+P.S.: The projects are written in portuguese, since they are projects from a brazilian University.
