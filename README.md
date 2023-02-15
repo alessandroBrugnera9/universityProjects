@@ -2,21 +2,21 @@
 Coding projects done in **mechatronics engineering of Poli-USP** in different courses:
 
 #### Control Engineering (focus on control Python and Matlab)
-- Control 1 (Python and Matlab)
-- Control 2 (Python and Matlab)
-- Dynamic System (Matlab)
+- Control 1 (Python and Matlab) 2020
+- Control 2 (Python and Matlab) 2020
+- Dynamic System (Matlab) 2019
 
 #### Complex physical,algebraic numerical problems
-- Numeric Calculus (Python)
-- Numeric Methods (Python and Matlab)
-- General Mechanics II (Matlab)
+- Numeric Calculus (Python) 2019
+- Numeric Methods (Python and Matlab) 2020
+- General Mechanics II (Matlab) 2020
 
 #### Programming logic and science
-- Programming Introduction (Python)
-- Mechatronics Programming (Python)
-- Microcontrollers (C)
-- Embedded Systems (C, Python and GCode)
-- System Information (Python and Django)
+- Programming Introduction (Python) 2017
+- Mechatronics Programming (Python) 2018
+- Microcontrollers (C) 2020
+- Embedded Systems (C, Python and GCode) 2020
+- System Information (Python and Django) 2019
 
 
 Numeric Calculus, Numeric Methods, Programming Introduction, Mechatronics Programming and General Mechanics II projects present mathematical, logical or physical problems that should be solved using efficient mathematical modelling and coding. These projects are bigger than the others and have specific requeriments detailed in the file "enunciado".
