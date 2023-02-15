@@ -1,0 +1,54 @@
+[submodule "Dynamic Systems/Segway"]
+	path = Dynamic Systems/Segway
+	url = https://github.com/alessandroBrugnera9/Segway.git
+[submodule "Embedded Systems/GCodeParser-ANTLR"]
+	path = Embedded Systems/GCodeParser-ANTLR
+	url = https://github.com/alessandroBrugnera9/GCodeParser-ANTLR.git
+[submodule "Embedded Systems/HierarchyArduinoMotorController"]
+	path = Embedded Systems/HierarchyArduinoMotorController
+	url = https://github.com/alessandroBrugnera9/HierarchyArduinoMotorController.git
+[submodule "General Mechanics II/modelagemMecanicaSimulacaoNumerica"]
+	path = General Mechanics II/modelagemMecanicaSimulacaoNumerica
+	url = https://github.com/alessandroBrugnera9/modelagemMecanicaSimulacaoNumerica.git
+[submodule "Mechatronics Programming/codificacaoHuffman"]
+	path = Mechatronics Programming/codificacaoHuffman
+	url = https://github.com/alessandroBrugnera9/codificacaoHuffman.git
+[submodule "Mechatronics Programming/caminhoMinimoDijkstra"]
+	path = Mechatronics Programming/caminhoMinimoDijkstra
+	url = https://github.com/alessandroBrugnera9/caminhoMinimoDijkstra.git
+[submodule "Mechatronics Programming/problemaSatisfazibilidadeBooleana"]
+	path = Mechatronics Programming/problemaSatisfazibilidadeBooleana
+	url = https://github.com/alessandroBrugnera9/problemaSatisfazibilidadeBooleana.git
+[submodule "Numeric Methods/modelagemIntegracaoRK4"]
+	path = Numeric Methods/modelagemIntegracaoRK4
+	url = https://github.com/alessandroBrugnera9/modelagemIntegracaoRK4.git
+[submodule "Numeric Methods/escoamentoHangarMDF"]
+	path = Numeric Methods/escoamentoHangarMDF
+	url = https://github.com/alessandroBrugnera9/escoamentoHangarMDF.git
+[submodule "Numeric Methods/modelagemTrelicaMEF"]
+	path = Numeric Methods/modelagemTrelicaMEF
+	url = https://github.com/alessandroBrugnera9/modelagemTrelicaMEF.git
+[submodule "Numeric Methods/campoEletricaMEF"]
+	path = Numeric Methods/campoEletricaMEF
+	url = https://github.com/alessandroBrugnera9/campoEletricaMEF.git
+[submodule "Numeric Calculus/MLfatoracaoQR"]
+	path = Numeric Calculus/MLfatoracaoQR
+	url = https://github.com/alessandroBrugnera9/MLfatoracaoQR.git
+[submodule "Numeric Calculus/tomografiaMMQ"]
+	path = Numeric Calculus/tomografiaMMQ
+	url = https://github.com/alessandroBrugnera9/tomografiaMMQ.git
+[submodule "Numeric Calculus/decomposicaoLUTridiagonais"]
+	path = Numeric Calculus/decomposicaoLUTridiagonais
+	url = https://github.com/alessandroBrugnera9/decomposicaoLUTridiagonais.git
+[submodule "Numeric Calculus/metodosnumericosEDOs"]
+	path = Numeric Calculus/metodosnumericosEDOs
+	url = https://github.com/alessandroBrugnera9/metodosnumericosEDOs.git
+[submodule "Numeric Calculus/integracaoGaussiana"]
+	path = Numeric Calculus/integracaoGaussiana
+	url = https://github.com/alessandroBrugnera9/integracaoGaussiana.git
+[submodule "Numeric Calculus/integracaoGaussMultiDimensional"]
+	path = Numeric Calculus/integracaoGaussMultiDimensional
+	url = https://github.com/alessandroBrugnera9/integracaoGaussMultiDimensional.git
+[submodule "Numeric Calculus/modelagemTemperaturaChipsMEF"]
+	path = Numeric Calculus/modelagemTemperaturaChipsMEF
+	url = https://github.com/alessandroBrugnera9/modelagemTemperaturaChipsMEF.git
